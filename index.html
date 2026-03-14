@@ -9,7 +9,7 @@
 <p>Please enter password to access files</p>
 <h2>Password:</h2>
 
-<input type="password" id="password">
+<input type="password" id="password" placeholder="Enter password" onkeypress="if(event.key==='Enter') checkPassword()">
 <button onclick="checkPassword()">Enter</button>
 
 <script>
