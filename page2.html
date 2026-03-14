@@ -1,12 +1,54 @@
 <!DOCTYPE html>
 <html>
 
-<body style="background:black; color:white; font-family:Arial; text-align:center;">
+<head>
+<title>Restricted Page</title>
 
-<h1>Notes</h1>
-<p>This page can contain different information.</p>
+<style>
+body{
+  background:black;
+  color:white;
+  font-family:Arial;
+  text-align:center;
+  padding-top:100px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Restricted Page</h1>
+<p>Please enter password</p>
+
+<input type="password" id="password" placeholder="Enter password">
+<br><br>
+
+<button onclick="checkPassword()">Enter</button>
+
+<div id="content" style="display:none; margin-top:40px;">
+
+<h2>Secret Content</h2>
+<p>This content is protected by a second password.</p>
 
 <a href="home.html">Back</a>
+
+</div>
+
+<script>
+function checkPassword(){
+
+  var pass = document.getElementById("password").value;
+
+  if(pass === "pedo"){
+    document.getElementById("content").style.display="block";
+  }
+  else{
+    alert("Wrong password");
+  }
+
+}
+</script>
 
 </body>
 
