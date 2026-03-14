@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<title>Files</title>
+<title>Restricted Page</title>
 
 <style>
 body{
@@ -18,18 +18,20 @@ body{
 
 <body>
 
-<h1>Files Section</h1>
-<p>Enter password to access</p>
+<h1>Restricted Page</h1>
+<p>Please enter password</p>
 
-<input type="password" id="password" placeholder="Enter password">
+<input type="password" id="password" placeholder="Enter password"
+onkeypress="if(event.key==='Enter') checkPassword()">
+
 <br><br>
 
 <button onclick="checkPassword()">Enter</button>
 
-<div id="content" style="display:none; margin-top:30px;">
+<div id="content" style="display:none; margin-top:40px;">
 
-<h2>Private Files</h2>
-<p>This is your hidden content.</p>
+<h2>Secret Content</h2>
+<p>This content is protected by a second password.</p>
 
 <a href="home.html">Back</a>
 
@@ -40,7 +42,7 @@ function checkPassword(){
 
   var pass = document.getElementById("password").value;
 
-  if(pass === "homo"){
+  if(pass === "pedo"){
     document.getElementById("content").style.display="block";
   }
   else{
