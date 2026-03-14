@@ -1,12 +1,54 @@
 <!DOCTYPE html>
 <html>
 
-<body style="background:black; color:white; font-family:Arial; text-align:center;">
+<head>
+<title>Files</title>
 
-<h1>Files</h1>
-<p>This is where your files or text will go.</p>
+<style>
+body{
+  background:black;
+  color:white;
+  font-family:Arial;
+  text-align:center;
+  padding-top:100px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Files Section</h1>
+<p>Enter password to access</p>
+
+<input type="password" id="password" placeholder="Enter password">
+<br><br>
+
+<button onclick="checkPassword()">Enter</button>
+
+<div id="content" style="display:none; margin-top:30px;">
+
+<h2>Private Files</h2>
+<p>This is your hidden content.</p>
 
 <a href="home.html">Back</a>
+
+</div>
+
+<script>
+function checkPassword(){
+
+  var pass = document.getElementById("password").value;
+
+  if(pass === "homo"){
+    document.getElementById("content").style.display="block";
+  }
+  else{
+    alert("Wrong password");
+  }
+
+}
+</script>
 
 </body>
 
