@@ -18,7 +18,7 @@ body{
 
 <body>
 
-<h1>Photos</h1>
+<h1>Restricted page</h1>
 <p>Please enter password</p>
 
 <input type="password" id="password" placeholder="Enter password"
@@ -31,6 +31,27 @@ onkeypress="if(event.key==='Enter') checkPassword()">
 <div id="content" style="display:none; margin-top:40px;">
 
 <h2>Gallery</h2>
-<p> These are photos that have been released by the council themselves. <!DOCTYPE html>
-<html>
+<p>These are images that have been realesed by the council themselves.</p>
 
+<a href="home.html">Back</a>
+
+</div>
+
+<script>
+function checkPassword(){
+
+  var pass = document.getElementById("password").value;
+
+  if(pass === "page2pass"){
+    document.getElementById("content").style.display="block";
+  }
+  else{
+    alert("Wrong password");
+  }
+
+}
+</script>
+
+</body>
+
+</html>
