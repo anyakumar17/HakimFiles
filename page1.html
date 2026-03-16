@@ -12,13 +12,21 @@ body{
   text-align:center;
   padding-top:100px;
 }
+
+button{
+  padding:12px 20px;
+  margin:15px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
 </style>
 
 </head>
 
 <body>
 
-<h1>Restricted Page</h1>
+<h1>The BDR Conspiracy</h1>
 <p>Please enter password</p>
 
 <input type="password" id="password" placeholder="Enter password"
@@ -28,16 +36,35 @@ onkeypress="if(event.key==='Enter') checkPassword()">
 
 <button onclick="checkPassword()">Enter</button>
 
+<!-- Hidden content -->
+
 <div id="content" style="display:none; margin-top:40px;">
 
-<h2>Welcome to the BDR files</h2>
-<p> Known allie of R.H. and has played a big part in deciphering this case.</p>
+<h2>Welcome to the BDR Files</h2>
+<p>You now have access to this page.</p>
 
-<a href="home.html">Back</a>
+
+
+<p> What is the BDR Conspiracy?</p>
+
+<p> A broken and confusing tradition requiring decisions from first victims, Josephine and Raynisha. The Tradition around Oct. 31st, halloween. They call it “BDR’s arrival”.  
+  The tactic of the two victims create submitted letters from “BDR” and hand them out individually to future/possible victims during a 30 minute break. 
+  The letters contain the possibility of them being the chosen victim of BDR’s this year, a note containing something that has to do with their personal life and an eerie signature.
+  The final part of this tradition is a final letter revealing who the BDR victim is.</p>
+<button onclick="location.href='secretpage.html'">
+Open Secret Page
+</button>
+
+<br><br>
+
+<button onclick="location.href='home.html'">
+Back to Home
+</button>
 
 </div>
 
 <script>
+
 function checkPassword(){
 
   var pass = document.getElementById("password").value;
@@ -50,6 +77,7 @@ function checkPassword(){
   }
 
 }
+
 </script>
 
 </body>
