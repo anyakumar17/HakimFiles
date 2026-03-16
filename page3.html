@@ -12,13 +12,21 @@ body{
   text-align:center;
   padding-top:100px;
 }
+
+button{
+  padding:12px 20px;
+  margin:15px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
 </style>
 
 </head>
 
 <body>
 
-<h1>Restricted page</h1>
+<h1>Gallery</h1>
 <p>Please enter password</p>
 
 <input type="password" id="password" placeholder="Enter password"
@@ -28,16 +36,27 @@ onkeypress="if(event.key==='Enter') checkPassword()">
 
 <button onclick="checkPassword()">Enter</button>
 
+<!-- Hidden content -->
+
 <div id="content" style="display:none; margin-top:40px;">
 
 <h2>Gallery</h2>
-<p>These are images that have been released by the council themselves.</p>
+<p>Real photos released by the council themself</p>
 
-<a href="home.html">Back</a>
+<button onclick="location.href='secretpage3.html'">
+Open Secret Page
+</button>
+
+<br><br>
+
+<button onclick="location.href='home.html'">
+Back to Home
+</button>
 
 </div>
 
 <script>
+
 function checkPassword(){
 
   var pass = document.getElementById("password").value;
@@ -50,6 +69,7 @@ function checkPassword(){
   }
 
 }
+
 </script>
 
 </body>
