@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<title> Quotes From Victims</title>
+<title>QUOTES</title>
 
 <style>
 body{
@@ -12,13 +12,21 @@ body{
   text-align:center;
   padding-top:100px;
 }
+
+button{
+  padding:12px 20px;
+  margin:15px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
 </style>
 
 </head>
 
 <body>
 
-<h1>Restricted Page</h1>
+<h1>Quotes</h1>
 <p>Please enter password</p>
 
 <input type="password" id="password" placeholder="Enter password"
@@ -28,16 +36,38 @@ onkeypress="if(event.key==='Enter') checkPassword()">
 
 <button onclick="checkPassword()">Enter</button>
 
+<!-- Hidden content -->
+
 <div id="content" style="display:none; margin-top:40px;">
 
-<h2> Quotes from Victims</h2>
-<p> Real quotes from real people who have suffered the effects of R.H.</p>
+<h2>Quotes From Victims</h2>
+<p>Real quotes from victims who have suffered the consequences of R.H. and her actions.</p>
 
-<a href="home.html">Back</a>
+<p>List of Victims<p>
+<p>A.K.</p>
+<p>A.P.</p>
+<p>J.D.</p>
+<p>L.T.</p>
+<p>L.R.T.</p>
+<p>S.B.</p>
+<p>S.C.</p>
+<p>S.N.</p>
+<p>S.V.</p>
+<p>R.K.</p>
+<button onclick="location.href='secretpage.html'">
+Full Quotes
+</button>
+
+<br><br>
+
+<button onclick="location.href='home.html'">
+Back to Home
+</button>
 
 </div>
 
 <script>
+
 function checkPassword(){
 
   var pass = document.getElementById("password").value;
@@ -50,6 +80,7 @@ function checkPassword(){
   }
 
 }
+
 </script>
 
 </body>
